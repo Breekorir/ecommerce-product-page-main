@@ -12,14 +12,18 @@ document.addEventListener("DOMContentLoaded", (event)  => {
         alert("Item added to cart")
     })
 })
-function openLightbox(imgElement) {
-    document.getElementById("lightbox").style.display="block"
-    document.getElementById("lightbox-img").src=imgElement.src
-
     
-}
-function closeLightbox() {
-    document.getElementById("lightbox").style.display="none"
-
+function openlightbox(image) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-img');
     
-}
+    // Set the source of the lightbox image to the clicked thumbnail
+    lightboxImage.src = image.src.replace("-thumbnail", ""); // Remove "-thumbnail" from the image source
+    lightbox.style.display = 'flex'; // Show the lightbox
+  }
+  
+  // Close lightbox function
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none'; // Hide the lightbox
+  }

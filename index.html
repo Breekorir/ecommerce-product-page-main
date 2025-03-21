@@ -12,7 +12,7 @@
 <body>
   <header>
 
-      <h1 class="logo"><a href="#">sneakers</a></h1>
+      <h1 class="logo"><img src="images/logo.svg" alt=""></h1>
       <nav><ul>
       <li><a href="#">  Collections</li>
       </a>
@@ -28,12 +28,24 @@
   </header>
   <main >
     <section class="product"><div class="image-gallery">
-    <img src="./images/image-product-1.jpg" id="main-img" alt="">
+    <img src="./images/image-product-1.jpg" id="main-img" onclick="openlightbox(this)"alt="">
     <div class="thumbnails">
-    <img src="./images/image-product-1-thumbnail.jpg"class="thumb" alt="">
-    <img src="./images/image-product-2-thumbnail.jpg"class="thumb" alt="">
-    <img src="./images/image-product-3-thumbnail.jpg"class="thumb" alt="">
-    <img src="./images/image-product-4-thumbnail.jpg"class="thumb" alt=""></div></div>
+    <img src="./images/image-product-1-thumbnail.jpg"class="thumb" onclick="openlightbox(this)" alt="">
+    <img src="./images/image-product-2-thumbnail.jpg"class="thumb"  onclick="openlightbox(this)" alt="">
+    <img src="./images/image-product-3-thumbnail.jpg"class="thumb"  onclick="openlightbox(this)"  alt="">
+    <img src="./images/image-product-4-thumbnail.jpg"class="thumb" onclick="openlightbox(this)"  alt=""></div></div>
+ 
+      <!-- Lightbox Overlay -->
+      <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="./images/image-product-1.jpg">
+        <div class="thumbnails">
+          <img src="./images/image-product-1-thumbnail.jpg"class="thumb" onclick="openlightbox(this)" alt="">
+          <img src="./images/image-product-2-thumbnail.jpg"class="thumb"  onclick="openlightbox(this)" alt="">
+          <img src="./images/image-product-3-thumbnail.jpg"class="thumb"  onclick="openlightbox(this)"  alt="">
+          <img src="./images/image-product-4-thumbnail.jpg"class="thumb" onclick="openlightbox(this)"  alt=""></div></div>
+       
+      </div>
   <div class="details">
   <h2>SNEAKER COMPANY</h2>
   <h1>  Fall Limited Edition Sneakers
